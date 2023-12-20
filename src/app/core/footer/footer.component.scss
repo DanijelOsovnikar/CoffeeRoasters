@@ -1,0 +1,35 @@
+@import "src/scss/_vars.scss";
+
+.container {
+  background-color: $darkGrayBlue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6em;
+  .wrapper {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+      margin: 0 5.5em;
+    }
+    .nav {
+      a {
+        text-decoration: none;
+        font-family: $barlow;
+        font-weight: 700;
+        color: $gray;
+        font-size: 1em;
+        line-height: 15px;
+        margin: 0 1em;
+      }
+    }
+  }
+  .social {
+    width: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 5.5em;
+  }
+}

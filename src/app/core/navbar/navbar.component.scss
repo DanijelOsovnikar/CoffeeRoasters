@@ -1,0 +1,19 @@
+@import "src/scss/_vars.scss";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2.75rem;
+  .nav {
+    a {
+      text-decoration: none;
+      font-family: $barlow;
+      font-weight: 700;
+      color: $gray;
+      font-size: 1em;
+      line-height: 15px;
+      margin: 0 1em;
+    }
+  }
+}

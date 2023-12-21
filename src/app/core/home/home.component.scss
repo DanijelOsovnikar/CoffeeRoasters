@@ -6,6 +6,42 @@
   align-items: center;
   .hero {
     margin: 2.75rem 0;
+    .text {
+      width: 30em;
+      position: absolute;
+      top: 240px;
+      left: 200px;
+      h1 {
+        font-family: $fraunces;
+        font-weight: 900;
+        font-size: 4.5rem;
+        line-height: 4.5rem;
+        color: $lightCreamyBg;
+      }
+      p {
+        color: $lightCreamyBg;
+        font-family: $barlow;
+        font-weight: 400;
+        margin-top: 2em;
+        width: 90%;
+        line-height: 1.625rem;
+      }
+      button {
+        background-color: $darkCyan;
+        color: $lightCreamyBg;
+        font-family: $fraunces;
+        font-weight: 700;
+        padding: 1em 3em;
+        border: none;
+        border-radius: 0.5em;
+        margin-top: 2em;
+
+        &:hover {
+          background-color: #66d2cf;
+          cursor: pointer;
+        }
+      }
+    }
     img {
       border-radius: 1em;
       width: 100%;
@@ -175,6 +211,11 @@
       border: none;
       border-radius: 0.5em;
       margin-top: 5em;
+
+      &:hover {
+        background-color: #66d2cf;
+        cursor: pointer;
+      }
     }
   }
 }

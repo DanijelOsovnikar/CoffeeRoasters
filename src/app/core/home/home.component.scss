@@ -4,8 +4,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   .hero {
     margin: 2.75rem 0;
+    width: 100%;
     .text {
       width: 30em;
       position: absolute;

@@ -1,0 +1,233 @@
+@import "src/scss/_vars.scss";
+
+.mainHeading {
+  color: $lightCreamyBg;
+  font-family: $fraunces;
+  font-size: 4.5rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 4.5rem;
+}
+.smallHeading {
+  color: #83888f;
+  font-family: $fraunces;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 3rem;
+}
+.mainParagraph {
+  color: $lightCreamyBg;
+  font-family: $barlow;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.625rem;
+  margin-top: 2rem;
+}
+.cardParagraph {
+  color: $darkGrayBlue;
+  font-family: $barlow;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.625rem;
+}
+
+.container {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .hero {
+    .hero-text {
+      position: absolute;
+      top: 250px;
+      left: 150px;
+      h2 {
+      }
+      p {
+        width: 28rem;
+      }
+    }
+    img {
+      border-radius: 1rem;
+    }
+  }
+  .first {
+    width: 100%;
+    margin-top: 8rem;
+    height: 38rem;
+  }
+  .subscribe {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8rem;
+  }
+}
+
+.firstWrapper {
+  background-color: $darkGrayBlue;
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  padding-top: 2.5rem;
+  padding-left: 5rem;
+
+  .line {
+    background-color: $paleOrange;
+    margin-top: 5rem;
+    height: 2px;
+    width: 50rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .circle {
+      width: 30px;
+      height: 30px;
+      border: 2px solid #0e8784;
+      border-radius: 50%;
+
+      &:first-of-type {
+        position: relative;
+        left: -15px;
+      }
+
+      &:last-of-type {
+        position: relative;
+        left: 15px;
+      }
+    }
+  }
+  .stepWrapper {
+    width: 60rem;
+    display: flex;
+    justify-content: space-between;
+    .group:first-of-type {
+      width: 20rem;
+      margin-top: 3rem;
+      h2 {
+        color: $paleOrange;
+      }
+      h3 {
+        font-size: 2rem;
+        line-height: 2.25rem;
+        color: $lightCreamyBg;
+        width: 10rem;
+        margin: 2.28rem 0;
+      }
+      p {
+        width: 19rem;
+      }
+    }
+    .group:nth-of-type(2) {
+      width: 20rem;
+      position: relative;
+      left: 5rem;
+      margin-top: 3rem;
+      h2 {
+        color: $paleOrange;
+      }
+      h3 {
+        font-size: 2rem;
+        line-height: 2.25rem;
+        color: $lightCreamyBg;
+        margin: 2.28rem 0;
+      }
+      p {
+        width: 18rem;
+      }
+    }
+    .group:last-of-type {
+      width: 20rem;
+      position: relative;
+      left: 10rem;
+      margin-top: 3rem;
+      h2 {
+        color: $paleOrange;
+      }
+      h3 {
+        margin: 2.28rem 0;
+        font-size: 2rem;
+        line-height: 2.25rem;
+        color: $lightCreamyBg;
+        width: 14rem;
+      }
+      p {
+        width: 17rem;
+      }
+    }
+  }
+}
+
+.navColumn {
+  width: 20%;
+  ul {
+    list-style: none;
+    li {
+      padding: 1rem 0;
+      border-bottom: 1px solid #83888f;
+      width: 86%;
+      p {
+        color: $darkGrayBlue;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        span {
+          color: #0e8784;
+        }
+      }
+    }
+  }
+}
+
+.optionsColumn {
+  width: 70%;
+
+  .accordion {
+    background: transparent;
+    font-size: 2rem;
+    line-height: 2.25rem;
+    cursor: pointer;
+    padding: 18px 0;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+
+    .active,
+    &:hover {
+      background-color: #ccc;
+    }
+  }
+  .panelWrapper {
+    display: flex;
+  }
+}
+
+.panel {
+  width: 30%;
+  height: 18rem;
+  background-color: #f4f1eb;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:first-child {
+    margin: 1rem 1rem 1rem 0;
+  }
+
+  h4 {
+    color: $darkGrayBlue;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    width: 75%;
+    margin: 1.75rem 0;
+  }
+  p {
+    width: 75%;
+  }
+}

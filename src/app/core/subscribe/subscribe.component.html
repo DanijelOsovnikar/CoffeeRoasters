@@ -1,46 +1,51 @@
 <div class="container">
   <div class="hero">
     <div class="hero-text">
-      <h2>Create plan</h2>
-      <p>
+      <h2 class="mainHeading">Create plan</h2>
+      <p class="mainParagraph">
         Coffee the way you wanted it to be. For coffee delivered tomorrow, or
         next week. For whatever brew method you use. For choice, for
         convenience, for quality.
       </p>
     </div>
-    <img src="assets/plan/desktop/image-hero-blackcup.jpg" alt="heroImg" />
+    <img
+      src="assets/plan/desktop/image-hero-blackcup.jpg"
+      alt="heroImg"
+      width="100%"
+    />
   </div>
   <section class="first">
     <div class="firstWrapper">
-      <div class="lineWrapper">
-        <div class="line"></div>
-        <img src="assets/home/desktop/circle.svg" alt="circleImg" />
-        <img src="assets/home/desktop/circle.svg" alt="circleImg" />
-        <img src="assets/home/desktop/circle.svg" alt="circleImg" />
+      <div class="line">
+        <div class="circle"></div>
+
+        <div class="circle"></div>
+
+        <div class="circle"></div>
       </div>
       <div class="stepWrapper">
         <div class="group">
-          <h2>01</h2>
-          <h3>Pick your coffee</h3>
-          <p>
+          <h2 class="mainHeading">01</h2>
+          <h3 class="smallHeading">Pick your coffee</h3>
+          <p class="mainParagraph">
             Select from our evolving range of artisan coffees. Our beans are
             ethically sourced and we pay fair prices for them. There are new
             coffees in all profiles every month for you to try out.
           </p>
         </div>
         <div class="group">
-          <h2>02</h2>
-          <h3>Choose the frequency</h3>
-          <p>
+          <h2 class="mainHeading">02</h2>
+          <h3 class="smallHeading">Choose the frequency</h3>
+          <p class="mainParagraph">
             Customize your order frequency, quantity, even your roast style and
             grind type. Pause, skip or cancel your subscription with no
             commitment through our online portal.
           </p>
         </div>
         <div class="group">
-          <h2>03</h2>
-          <h3>Receive and enjoy!</h3>
-          <p>
+          <h2 class="mainHeading">03</h2>
+          <h3 class="smallHeading">Receive and enjoy!</h3>
+          <p class="mainParagraph">
             We ship your package within 48 hours, freshly roasted. Sit back and
             enjoy award-winning world-class coffees curated to provide a
             distinct tasting experience.
@@ -53,102 +58,136 @@
     <div class="navColumn">
       <ul>
         <li>
-          <p><span>01</span> Preferences</p>
+          <p class="mainHeading"><span>01</span> Preferences</p>
         </li>
         <li>
-          <p><span>02</span> Bean Type</p>
+          <p class="mainHeading"><span>02</span> Bean Type</p>
         </li>
         <li>
-          <p><span>03</span> Quantity</p>
+          <p class="mainHeading"><span>03</span> Quantity</p>
         </li>
         <li>
-          <p><span>04</span> Grind Option</p>
+          <p class="mainHeading"><span>04</span> Grind Option</p>
         </li>
         <li>
-          <p><span>05</span> Deliveries</p>
+          <p class="mainHeading"><span>05</span> Deliveries</p>
         </li>
       </ul>
     </div>
     <div class="optionsColumn">
-      <button class="accordion">How do you drink your coffee?</button>
-      <div class="panelWrapper">
+      <button (click)="toggleFunc($event)" class="accordion smallHeading">
+        How do you drink your coffee?
+      </button>
+      <div class="panelWrapper" style="display: flex">
         <div class="panel">
-          <h4>Capsule</h4>
-          <p>Compatible with Nespresso systems and similar brewers</p>
+          <h4 class="mainHeading">Capsule</h4>
+          <p class="cardParagraph">
+            Compatible with Nespresso systems and similar brewers
+          </p>
         </div>
         <div class="panel">
-          <h4>Filter</h4>
-          <p>For pour over or drip methods like Aeropress, Chemex, and V60</p>
+          <h4 class="mainHeading">Filter</h4>
+          <p class="cardParagraph">
+            For pour over or drip methods like Aeropress, Chemex, and V60
+          </p>
         </div>
         <div class="panel">
-          <h4>Espresso</h4>
-          <p>
+          <h4 class="mainHeading">Espresso</h4>
+          <p class="cardParagraph">
             Dense and finely ground beans for an intense, flavorful experience
           </p>
         </div>
       </div>
-      <button class="accordion">What type of coffee?</button>
-      <div class="panelWrapper">
+      <button (click)="toggleFunc($event)" class="accordion smallHeading">
+        What type of coffee?
+      </button>
+      <div class="panelWrapper" style="display: none">
         <div class="panel">
-          <h4>Single Origin</h4>
-          <p>Distinct, high quality coffee from a specific family-owned farm</p>
+          <h4 class="mainHeading">Single Origin</h4>
+          <p class="cardParagraph">
+            Distinct, high quality coffee from a specific family-owned farm
+          </p>
         </div>
         <div class="panel">
-          <h4>Decaf</h4>
-          <p>Just like regular coffee, except the caffeine has been removed</p>
+          <h4 class="mainHeading">Decaf</h4>
+          <p class="cardParagraph">
+            Just like regular coffee, except the caffeine has been removed
+          </p>
         </div>
         <div class="panel">
-          <h4>Blended</h4>
-          <p>
+          <h4 class="mainHeading">Blended</h4>
+          <p class="cardParagraph">
             Combination of two or three dark roasted beans of organic coffees
           </p>
         </div>
       </div>
-      <button class="accordion">How much would you like?</button>
-      <div class="panelWrapper">
+      <button (click)="toggleFunc($event)" class="accordion smallHeading">
+        How much would you like?
+      </button>
+      <div class="panelWrapper" style="display: none">
         <div class="panel">
-          <h4>250g</h4>
-          <p>Perfect for the solo drinker. Yields about 12 delicious cups.</p>
+          <h4 class="mainHeading">250g</h4>
+          <p class="cardParagraph">
+            Perfect for the solo drinker. Yields about 12 delicious cups.
+          </p>
         </div>
         <div class="panel">
-          <h4>500g</h4>
-          <p>Perfect option for a couple. Yields about 40 delectable cups.</p>
+          <h4 class="mainHeading">500g</h4>
+          <p class="cardParagraph">
+            Perfect option for a couple. Yields about 40 delectable cups.
+          </p>
         </div>
         <div class="panel">
-          <h4>1000g</h4>
-          <p>
+          <h4 class="mainHeading">1000g</h4>
+          <p class="cardParagraph">
             Perfect for offices and events. Yields about 90 delightful cups.
           </p>
         </div>
       </div>
-      <button class="accordion">Want us to grind them?</button>
-      <div class="panelWrapper">
+      <button (click)="toggleFunc($event)" class="accordion smallHeading">
+        Want us to grind them?
+      </button>
+      <div class="panelWrapper" style="display: none">
         <div class="panel">
-          <h4>Wholebean</h4>
-          <p>Best choice if you cherish the full sensory experience</p>
+          <h4 class="mainHeading">Wholebean</h4>
+          <p class="cardParagraph">
+            Best choice if you cherish the full sensory experience
+          </p>
         </div>
         <div class="panel">
-          <h4>Filter</h4>
-          <p>For drip or pour-over coffee methods such as V60 or Aeropress</p>
+          <h4 class="mainHeading">Filter</h4>
+          <p class="cardParagraph">
+            For drip or pour-over coffee methods such as V60 or Aeropress
+          </p>
         </div>
         <div class="panel">
-          <h4>Cafetiére</h4>
-          <p>Course ground beans specially suited for french press coffee</p>
+          <h4 class="mainHeading">Cafetiére</h4>
+          <p class="cardParagraph">
+            Course ground beans specially suited for french press coffee
+          </p>
         </div>
       </div>
-      <button class="accordion">How often should we deliver?</button>
-      <div class="panelWrapper">
+      <button (click)="toggleFunc($event)" class="accordion smallHeading">
+        How often should we deliver?
+      </button>
+      <div class="panelWrapper" style="display: none">
         <div class="panel">
-          <h4>Every week</h4>
-          <p>$7.20 per shipment. Includes free first-class shipping.</p>
+          <h4 class="mainHeading">Every week</h4>
+          <p class="cardParagraph">
+            $7.20 per shipment. Includes free first-class shipping.
+          </p>
         </div>
         <div class="panel">
-          <h4>Every 2 weeks</h4>
-          <p>$9.60 per shipment. Includes free priority shipping.</p>
+          <h4 class="mainHeading">Every 2 weeks</h4>
+          <p class="cardParagraph">
+            $9.60 per shipment. Includes free priority shipping.
+          </p>
         </div>
         <div class="panel">
-          <h4>Every month</h4>
-          <p>$12.00 per shipment. Includes free priority shipping.</p>
+          <h4 class="mainHeading">Every month</h4>
+          <p class="cardParagraph">
+            $12.00 per shipment. Includes free priority shipping.
+          </p>
         </div>
       </div>
       <div class="summary">

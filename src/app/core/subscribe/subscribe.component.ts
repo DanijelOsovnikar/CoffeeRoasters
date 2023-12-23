@@ -20,5 +20,11 @@ export class SubscribeComponent implements OnInit {
     } else {
       panel.style.display = 'flex';
     }
+
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+    }
   }
 }

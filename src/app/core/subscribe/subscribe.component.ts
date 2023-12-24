@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-subscribe',
@@ -6,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./subscribe.component.scss'],
 })
 export class SubscribeComponent implements OnInit {
-  constructor() {}
-  ngOnInit(): void {}
+  constructor(private router: Router) {}
+  ngOnInit(): void {
+    if (this.router.url == '/subscribe') {
+      window.scrollTo(0, 0);
+    }
+  }
 
   toggleFunc(event: any) {
     console.log(event);

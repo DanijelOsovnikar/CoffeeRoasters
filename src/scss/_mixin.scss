@@ -1,0 +1,28 @@
+@import "src/scss/_vars.scss";
+
+@mixin panel {
+  width: 30%;
+  height: 18rem;
+  background-color: #0e8784;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+
+  &:first-child {
+    margin: 1rem 1rem 1rem 0;
+  }
+
+  h4 {
+    color: $lightCreamyBg;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    width: 75%;
+    margin: 1.75rem 0;
+  }
+  p {
+    width: 75%;
+    color: $lightCreamyBg;
+  }
+}

@@ -1,4 +1,5 @@
 @import "src/scss/_vars.scss";
+@import "src/scss/_mixin.scss";
 
 .mainHeading {
   color: $lightCreamyBg;
@@ -289,5 +290,13 @@
     font-family: $fraunces;
     font-weight: 900;
     font-size: 1.125rem;
+    &:hover {
+      cursor: pointer;
+      background-color: #0a605f;
+    }
   }
+}
+
+.panelActive {
+  @include panel;
 }

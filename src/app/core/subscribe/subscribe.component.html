@@ -79,21 +79,21 @@
         How do you drink your coffee?
       </button>
       <div class="panelWrapper" style="display: flex; max-height: 320px">
-        <div class="panel">
-          <h4 class="mainHeading">Capsule</h4>
-          <p class="cardParagraph">
+        <div class="panel" id="capsule" (click)="trackTouchBeverage($event)">
+          <h4 id="capsule" class="mainHeading">Capsule</h4>
+          <p id="capsule" class="cardParagraph">
             Compatible with Nespresso systems and similar brewers
           </p>
         </div>
-        <div class="panel">
-          <h4 class="mainHeading">Filter</h4>
-          <p class="cardParagraph">
+        <div class="panel" id="filter" (click)="trackTouchBeverage($event)">
+          <h4 id="filter" class="mainHeading">Filter</h4>
+          <p id="filter" class="cardParagraph">
             For pour over or drip methods like Aeropress, Chemex, and V60
           </p>
         </div>
-        <div class="panel">
-          <h4 class="mainHeading">Espresso</h4>
-          <p class="cardParagraph">
+        <div class="panel" id="espresso" (click)="trackTouchBeverage($event)">
+          <h4 id="espresso" class="mainHeading">Espresso</h4>
+          <p id="espresso" class="cardParagraph">
             Dense and finely ground beans for an intense, flavorful experience
           </p>
         </div>
@@ -102,21 +102,25 @@
         What type of coffee?
       </button>
       <div class="panelWrapper" style="display: none">
-        <div class="panel">
-          <h4 class="mainHeading">Single Origin</h4>
-          <p class="cardParagraph">
+        <div
+          class="panel"
+          id="singleOrigin"
+          (click)="trackTouchCoffeeType($event)"
+        >
+          <h4 id="singleOrigin" class="mainHeading">Single Origin</h4>
+          <p id="singleOrigin" class="cardParagraph">
             Distinct, high quality coffee from a specific family-owned farm
           </p>
         </div>
-        <div class="panel">
-          <h4 class="mainHeading">Decaf</h4>
-          <p class="cardParagraph">
+        <div class="panel" id="decaf" (click)="trackTouchCoffeeType($event)">
+          <h4 id="decaf" class="mainHeading">Decaf</h4>
+          <p id="decaf" class="cardParagraph">
             Just like regular coffee, except the caffeine has been removed
           </p>
         </div>
-        <div class="panel">
-          <h4 class="mainHeading">Blended</h4>
-          <p class="cardParagraph">
+        <div class="panel" id="blended" (click)="trackTouchCoffeeType($event)">
+          <h4 id="blended" class="mainHeading">Blended</h4>
+          <p id="blended" class="cardParagraph">
             Combination of two or three dark roasted beans of organic coffees
           </p>
         </div>
@@ -125,21 +129,25 @@
         How much would you like?
       </button>
       <div class="panelWrapper" style="display: none">
-        <div class="panel">
-          <h4 class="mainHeading">250g</h4>
-          <p class="cardParagraph">
+        <div class="panel" id="twoFiftyGr" (click)="trackHowMuchCoffee($event)">
+          <h4 id="twoFiftyGr" class="mainHeading">250g</h4>
+          <p id="twoFiftyGr" class="cardParagraph">
             Perfect for the solo drinker. Yields about 12 delicious cups.
           </p>
         </div>
-        <div class="panel">
-          <h4 class="mainHeading">500g</h4>
-          <p class="cardParagraph">
+        <div
+          class="panel"
+          id="fiveHundredGr"
+          (click)="trackHowMuchCoffee($event)"
+        >
+          <h4 id="fiveHundredGr" class="mainHeading">500g</h4>
+          <p id="fiveHundredGr" class="cardParagraph">
             Perfect option for a couple. Yields about 40 delectable cups.
           </p>
         </div>
-        <div class="panel">
-          <h4 class="mainHeading">1000g</h4>
-          <p class="cardParagraph">
+        <div class="panel" id="oneKg" (click)="trackHowMuchCoffee($event)">
+          <h4 id="oneKg" class="mainHeading">1000g</h4>
+          <p id="oneKg" class="cardParagraph">
             Perfect for offices and events. Yields about 90 delightful cups.
           </p>
         </div>
@@ -148,21 +156,21 @@
         Want us to grind them?
       </button>
       <div class="panelWrapper" style="display: none">
-        <div class="panel">
-          <h4 class="mainHeading">Wholebean</h4>
-          <p class="cardParagraph">
+        <div class="panel" id="wholeBean" (click)="trackGrind($event)">
+          <h4 id="wholeBean" class="mainHeading">Wholebean</h4>
+          <p id="wholeBean" class="cardParagraph">
             Best choice if you cherish the full sensory experience
           </p>
         </div>
-        <div class="panel">
-          <h4 class="mainHeading">Filter</h4>
-          <p class="cardParagraph">
+        <div class="panel" id="filterGrind" (click)="trackGrind($event)">
+          <h4 id="filterGrind" class="mainHeading">Filter</h4>
+          <p id="filterGrind" class="cardParagraph">
             For drip or pour-over coffee methods such as V60 or Aeropress
           </p>
         </div>
-        <div class="panel">
-          <h4 class="mainHeading">Cafetiére</h4>
-          <p class="cardParagraph">
+        <div class="panel" id="cafetiere" (click)="trackGrind($event)">
+          <h4 id="cafetiere" class="mainHeading">Cafetiére</h4>
+          <p id="cafetiere" class="cardParagraph">
             Course ground beans specially suited for french press coffee
           </p>
         </div>
@@ -171,21 +179,21 @@
         How often should we deliver?
       </button>
       <div class="panelWrapper" style="display: none">
-        <div class="panel">
-          <h4 class="mainHeading">Every week</h4>
-          <p class="cardParagraph">
+        <div class="panel" id="oneWeek" (click)="trackDelivery($event)">
+          <h4 id="oneWeek" class="mainHeading">Every week</h4>
+          <p id="oneWeek" class="cardParagraph">
             $7.20 per shipment. Includes free first-class shipping.
           </p>
         </div>
-        <div class="panel">
-          <h4 class="mainHeading">Every 2 weeks</h4>
-          <p class="cardParagraph">
+        <div class="panel" id="twoWeeks" (click)="trackDelivery($event)">
+          <h4 id="twoWeeks" class="mainHeading">Every 2 weeks</h4>
+          <p id="twoWeeks" class="cardParagraph">
             $9.60 per shipment. Includes free priority shipping.
           </p>
         </div>
-        <div class="panel">
-          <h4 class="mainHeading">Every month</h4>
-          <p class="cardParagraph">
+        <div class="panel" id="month" (click)="trackDelivery($event)">
+          <h4 id="month" class="mainHeading">Every month</h4>
+          <p id="month" class="cardParagraph">
             $12.00 per shipment. Includes free priority shipping.
           </p>
         </div>

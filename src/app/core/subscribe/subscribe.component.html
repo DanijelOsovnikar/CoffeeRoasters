@@ -79,124 +79,161 @@
         How do you drink your coffee?
       </button>
       <div class="panelWrapper" style="display: flex; max-height: 320px">
-        <div class="panel" id="capsule" (click)="trackTouchBeverage($event)">
-          <h4 id="capsule" class="mainHeading">Capsule</h4>
-          <p id="capsule" class="cardParagraph">
-            Compatible with Nespresso systems and similar brewers
-          </p>
-        </div>
-        <div class="panel" id="filter" (click)="trackTouchBeverage($event)">
-          <h4 id="filter" class="mainHeading">Filter</h4>
-          <p id="filter" class="cardParagraph">
-            For pour over or drip methods like Aeropress, Chemex, and V60
-          </p>
-        </div>
-        <div class="panel" id="espresso" (click)="trackTouchBeverage($event)">
-          <h4 id="espresso" class="mainHeading">Espresso</h4>
-          <p id="espresso" class="cardParagraph">
-            Dense and finely ground beans for an intense, flavorful experience
-          </p>
-        </div>
+        <input type="radio" name="beverage" id="capsule" />
+        <label for="capsule">
+          <div class="panel">
+            <h4 class="mainHeading">Capsule</h4>
+            <p class="cardParagraph">
+              Compatible with Nespresso systems and similar brewers
+            </p>
+          </div>
+        </label>
+        <input type="radio" name="beverage" id="filter" />
+        <label for="filter">
+          <div class="panel">
+            <h4 class="mainHeading">Filter</h4>
+            <p class="cardParagraph">
+              For pour over or drip methods like Aeropress, Chemex, and V60
+            </p>
+          </div>
+        </label>
+        <input type="radio" name="beverage" id="espresso" />
+        <label for="espresso">
+          <div class="panel">
+            <h4 class="mainHeading">Espresso</h4>
+            <p class="cardParagraph">
+              Dense and finely ground beans for an intense, flavorful experience
+            </p>
+          </div>
+        </label>
       </div>
       <button (click)="toggleFunc($event)" class="accordion smallHeading">
         What type of coffee?
       </button>
       <div class="panelWrapper" style="display: none">
-        <div
-          class="panel"
-          id="singleOrigin"
-          (click)="trackTouchCoffeeType($event)"
-        >
-          <h4 id="singleOrigin" class="mainHeading">Single Origin</h4>
-          <p id="singleOrigin" class="cardParagraph">
-            Distinct, high quality coffee from a specific family-owned farm
-          </p>
-        </div>
-        <div class="panel" id="decaf" (click)="trackTouchCoffeeType($event)">
-          <h4 id="decaf" class="mainHeading">Decaf</h4>
-          <p id="decaf" class="cardParagraph">
-            Just like regular coffee, except the caffeine has been removed
-          </p>
-        </div>
-        <div class="panel" id="blended" (click)="trackTouchCoffeeType($event)">
-          <h4 id="blended" class="mainHeading">Blended</h4>
-          <p id="blended" class="cardParagraph">
-            Combination of two or three dark roasted beans of organic coffees
-          </p>
-        </div>
+        <input type="radio" name="coffeeType" id="singleOrigin" />
+        <label for="singleOrigin">
+          <div class="panel">
+            <h4 class="mainHeading">Single Origin</h4>
+            <p class="cardParagraph">
+              Distinct, high quality coffee from a specific family-owned farm
+            </p>
+          </div>
+        </label>
+        <input type="radio" name="coffeeType" id="decaf" />
+        <label for="decaf">
+          <div class="panel">
+            <h4 class="mainHeading">Decaf</h4>
+            <p class="cardParagraph">
+              Just like regular coffee, except the caffeine has been removed
+            </p>
+          </div>
+        </label>
+        <input type="radio" name="coffeeType" id="blended" />
+        <label for="blended">
+          <div class="panel">
+            <h4 class="mainHeading">Blended</h4>
+            <p class="cardParagraph">
+              Combination of two or three dark roasted beans of organic coffees
+            </p>
+          </div>
+        </label>
       </div>
       <button (click)="toggleFunc($event)" class="accordion smallHeading">
         How much would you like?
       </button>
       <div class="panelWrapper" style="display: none">
-        <div class="panel" id="twoFiftyGr" (click)="trackHowMuchCoffee($event)">
-          <h4 id="twoFiftyGr" class="mainHeading">250g</h4>
-          <p id="twoFiftyGr" class="cardParagraph">
-            Perfect for the solo drinker. Yields about 12 delicious cups.
-          </p>
-        </div>
-        <div
-          class="panel"
-          id="fiveHundredGr"
-          (click)="trackHowMuchCoffee($event)"
-        >
-          <h4 id="fiveHundredGr" class="mainHeading">500g</h4>
-          <p id="fiveHundredGr" class="cardParagraph">
-            Perfect option for a couple. Yields about 40 delectable cups.
-          </p>
-        </div>
-        <div class="panel" id="oneKg" (click)="trackHowMuchCoffee($event)">
-          <h4 id="oneKg" class="mainHeading">1000g</h4>
-          <p id="oneKg" class="cardParagraph">
-            Perfect for offices and events. Yields about 90 delightful cups.
-          </p>
-        </div>
+        <input type="radio" name="howMuchCoffee" id="quarter" />
+        <label for="quarter">
+          <div class="panel">
+            <h4 class="mainHeading">250g</h4>
+            <p class="cardParagraph">
+              Perfect for the solo drinker. Yields about 12 delicious cups.
+            </p>
+          </div>
+        </label>
+        <input type="radio" name="howMuchCoffee" id="half" />
+        <label for="half"
+          ><div class="panel">
+            <h4 class="mainHeading">500g</h4>
+            <p class="cardParagraph">
+              Perfect option for a couple. Yields about 40 delectable cups.
+            </p>
+          </div>
+        </label>
+        <input type="radio" name="howMuchCoffee" id="full" />
+        <label for="full">
+          <div class="panel">
+            <h4 class="mainHeading">1000g</h4>
+            <p class="cardParagraph">
+              Perfect for offices and events. Yields about 90 delightful cups.
+            </p>
+          </div>
+        </label>
       </div>
       <button (click)="toggleFunc($event)" class="accordion smallHeading">
         Want us to grind them?
       </button>
       <div class="panelWrapper" style="display: none">
-        <div class="panel" id="wholeBean" (click)="trackGrind($event)">
-          <h4 id="wholeBean" class="mainHeading">Wholebean</h4>
-          <p id="wholeBean" class="cardParagraph">
-            Best choice if you cherish the full sensory experience
-          </p>
-        </div>
-        <div class="panel" id="filterGrind" (click)="trackGrind($event)">
-          <h4 id="filterGrind" class="mainHeading">Filter</h4>
-          <p id="filterGrind" class="cardParagraph">
-            For drip or pour-over coffee methods such as V60 or Aeropress
-          </p>
-        </div>
-        <div class="panel" id="cafetiere" (click)="trackGrind($event)">
-          <h4 id="cafetiere" class="mainHeading">Cafetiére</h4>
-          <p id="cafetiere" class="cardParagraph">
-            Course ground beans specially suited for french press coffee
-          </p>
-        </div>
+        <input type="radio" name="grind" id="wholeBean" />
+        <label for="wholeBean">
+          <div class="panel">
+            <h4 class="mainHeading">Wholebean</h4>
+            <p class="cardParagraph">
+              Best choice if you cherish the full sensory experience
+            </p>
+          </div>
+        </label>
+        <input type="radio" name="grind" id="filter" />
+        <label for="filter">
+          <div class="panel">
+            <h4 class="mainHeading">Filter</h4>
+            <p class="cardParagraph">
+              For drip or pour-over coffee methods such as V60 or Aeropress
+            </p>
+          </div>
+        </label>
+        <input type="radio" name="grind" id="cafetiere" />
+        <label for="cafetiere">
+          <div class="panel">
+            <h4 class="mainHeading">Cafetiére</h4>
+            <p class="cardParagraph">
+              Course ground beans specially suited for french press coffee
+            </p>
+          </div>
+        </label>
       </div>
       <button (click)="toggleFunc($event)" class="accordion smallHeading">
         How often should we deliver?
       </button>
       <div class="panelWrapper" style="display: none">
-        <div class="panel" id="oneWeek" (click)="trackDelivery($event)">
-          <h4 id="oneWeek" class="mainHeading">Every week</h4>
-          <p id="oneWeek" class="cardParagraph">
-            $7.20 per shipment. Includes free first-class shipping.
-          </p>
-        </div>
-        <div class="panel" id="twoWeeks" (click)="trackDelivery($event)">
-          <h4 id="twoWeeks" class="mainHeading">Every 2 weeks</h4>
-          <p id="twoWeeks" class="cardParagraph">
-            $9.60 per shipment. Includes free priority shipping.
-          </p>
-        </div>
-        <div class="panel" id="month" (click)="trackDelivery($event)">
-          <h4 id="month" class="mainHeading">Every month</h4>
-          <p id="month" class="cardParagraph">
-            $12.00 per shipment. Includes free priority shipping.
-          </p>
-        </div>
+        <input type="radio" name="delivery" id="everyWeek" />
+        <label for="everyWeek">
+          <div class="panel">
+            <h4 class="mainHeading">Every week</h4>
+            <p class="cardParagraph">
+              $7.20 per shipment. Includes free first-class shipping.
+            </p>
+          </div>
+        </label>
+        <input type="radio" name="delivery" id="twoWeeks" />
+        <label for="twoWeeks">
+          <div class="panel">
+            <h4 class="mainHeading">Every 2 weeks</h4>
+            <p class="cardParagraph">
+              $9.60 per shipment. Includes free priority shipping.
+            </p>
+          </div>
+        </label>
+        <input type="radio" name="delivery" id="everyMonth" />
+        <label for="everyMonth">
+          <div class="panel">
+            <h4 class="mainHeading">Every month</h4>
+            <p class="cardParagraph">
+              $12.00 per shipment. Includes free priority shipping.
+            </p>
+          </div>
+        </label>
       </div>
       <div class="summary">
         <div class="order">

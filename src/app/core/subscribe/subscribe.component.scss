@@ -300,3 +300,7 @@
 .panelActive {
   @include panel;
 }
+
+input {
+  display: none;
+}

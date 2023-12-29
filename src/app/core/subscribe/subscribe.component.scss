@@ -226,6 +226,10 @@ label {
   border-radius: 0.5rem;
   cursor: pointer;
 
+  &:hover {
+    background-color: #fdd6ba;
+  }
+
   &:first-child {
     margin: 1rem 1rem 1rem 0;
   }

@@ -192,6 +192,7 @@
           type="radio"
           [formControl]="howMuchCoffee"
           (change)="onChangeSummary()"
+          (change)="priceCalcShipment()"
           value="250g"
           name="howMuchCoffee"
           id="quarter"
@@ -208,6 +209,7 @@
           type="radio"
           [formControl]="howMuchCoffee"
           (change)="onChangeSummary()"
+          (change)="priceCalcShipment()"
           value="500g"
           name="howMuchCoffee"
           id="half"
@@ -224,6 +226,7 @@
           type="radio"
           [formControl]="howMuchCoffee"
           (change)="onChangeSummary()"
+          (change)="priceCalcShipment()"
           value="1000g"
           name="howMuchCoffee"
           id="full"
@@ -310,7 +313,8 @@
           <div class="panel">
             <h4 class="mainHeading">Every week</h4>
             <p class="cardParagraph">
-              $7.20 per shipment. Includes free first-class shipping.
+              ${{ priceForWeek }} per shipment. Includes free first-class
+              shipping.
             </p>
           </div>
         </label>
@@ -326,7 +330,8 @@
           <div class="panel">
             <h4 class="mainHeading">Every 2 weeks</h4>
             <p class="cardParagraph">
-              $9.60 per shipment. Includes free priority shipping.
+              ${{ priceForTwoWeeks }} per shipment. Includes free priority
+              shipping.
             </p>
           </div>
         </label>
@@ -342,7 +347,8 @@
           <div class="panel">
             <h4 class="mainHeading">Every month</h4>
             <p class="cardParagraph">
-              $12.00 per shipment. Includes free priority shipping.
+              ${{ priceForMonth }} per shipment. Includes free priority
+              shipping.
             </p>
           </div>
         </label>
@@ -366,7 +372,12 @@
         </div>
       </div>
       <div class="submitButton">
-        <button (click)="onClick()" (click)="open()" class="submit">
+        <button
+          (click)="onClick()"
+          (click)="finalPriceCalc()"
+          (click)="open()"
+          class="submit"
+        >
           Create my plan!
         </button>
       </div>

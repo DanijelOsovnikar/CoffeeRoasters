@@ -10,11 +10,16 @@ import { CheckoutPopupComponent } from '../checkout-popup/checkout-popup.compone
   styleUrls: ['./subscribe.component.scss'],
 })
 export class SubscribeComponent implements OnInit {
-  beverage = new FormControl('');
+  beverage = new FormControl('_____');
   coffeeType = new FormControl('_____');
   howMuchCoffee = new FormControl('_____');
   grind = new FormControl('_____');
   delivery = new FormControl('_____');
+  price: string = '';
+  priceForWeek: string = '7.20';
+  priceForTwoWeeks: string = '9.60';
+  priceForMonth: string = '12.00';
+
   grindDisabled: boolean = false;
 
   constructor(private router: Router, private modalService: NgbModal) {}
@@ -49,6 +54,7 @@ export class SubscribeComponent implements OnInit {
       this.grindDisabled = true;
     }
   }
+
   noCapsule(event: any) {
     if (event.target.checked == true) {
       this.grindDisabled = false;
@@ -79,6 +85,37 @@ export class SubscribeComponent implements OnInit {
     }
   }
 
+  priceCalcShipment() {
+    if (this.howMuchCoffee.value == '250g') {
+      this.priceForWeek = '7.20';
+      this.priceForTwoWeeks = '9.60';
+      this.priceForMonth = '12.00';
+    }
+    if (this.howMuchCoffee.value == '500g') {
+      this.priceForWeek = '13.00';
+      this.priceForTwoWeeks = '17.50';
+      this.priceForMonth = '22.00';
+    }
+    if (this.howMuchCoffee.value == '1000g') {
+      this.priceForWeek = '22.00';
+      this.priceForTwoWeeks = '32.00';
+      this.priceForMonth = '42.00';
+    }
+  }
+
+  finalPriceCalc() {
+    console.log(this.price);
+    if (this.delivery.value == 'Every week') {
+      this.price = this.priceForWeek;
+    }
+    if (this.delivery.value == 'Every 2 weeks') {
+      this.price = this.priceForTwoWeeks;
+    }
+    if (this.delivery.value == 'Every month') {
+      this.price = this.priceForMonth;
+    }
+  }
+
   open() {
     const modalRef = this.modalService.open(CheckoutPopupComponent);
     modalRef.componentInstance.beverage = this.beverage.value;
@@ -86,5 +123,6 @@ export class SubscribeComponent implements OnInit {
     modalRef.componentInstance.howMuchCoffee = this.howMuchCoffee.value;
     modalRef.componentInstance.grind = this.grind.value;
     modalRef.componentInstance.delivery = this.delivery.value;
+    modalRef.componentInstance.price = this.price;
   }
 }

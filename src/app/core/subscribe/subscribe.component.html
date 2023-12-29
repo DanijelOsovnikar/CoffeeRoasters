@@ -79,7 +79,14 @@
         How do you drink your coffee?
       </button>
       <div class="panelWrapper" style="display: flex; max-height: 320px">
-        <input type="radio" name="beverage" id="capsule" />
+        <input
+          type="radio"
+          [formControl]="beverage"
+          (change)="onChangeActive($event)"
+          value="Capsule"
+          name="beverage"
+          id="capsule"
+        />
         <label for="capsule">
           <div class="panel">
             <h4 class="mainHeading">Capsule</h4>
@@ -88,7 +95,14 @@
             </p>
           </div>
         </label>
-        <input type="radio" name="beverage" id="filter" />
+        <input
+          type="radio"
+          [formControl]="beverage"
+          (change)="onChangeActive($event)"
+          value="Filter"
+          name="beverage"
+          id="filter"
+        />
         <label for="filter">
           <div class="panel">
             <h4 class="mainHeading">Filter</h4>
@@ -97,7 +111,14 @@
             </p>
           </div>
         </label>
-        <input type="radio" name="beverage" id="espresso" />
+        <input
+          type="radio"
+          [formControl]="beverage"
+          (change)="onChangeActive($event)"
+          value="Espresso"
+          name="beverage"
+          id="espresso"
+        />
         <label for="espresso">
           <div class="panel">
             <h4 class="mainHeading">Espresso</h4>
@@ -111,7 +132,14 @@
         What type of coffee?
       </button>
       <div class="panelWrapper" style="display: none">
-        <input type="radio" name="coffeeType" id="singleOrigin" />
+        <input
+          type="radio"
+          [formControl]="coffeeType"
+          (change)="onChangeActive($event)"
+          value="Single Origin"
+          name="coffeeType"
+          id="singleOrigin"
+        />
         <label for="singleOrigin">
           <div class="panel">
             <h4 class="mainHeading">Single Origin</h4>
@@ -120,7 +148,14 @@
             </p>
           </div>
         </label>
-        <input type="radio" name="coffeeType" id="decaf" />
+        <input
+          type="radio"
+          [formControl]="coffeeType"
+          (change)="onChangeActive($event)"
+          value="Decaf"
+          name="coffeeType"
+          id="decaf"
+        />
         <label for="decaf">
           <div class="panel">
             <h4 class="mainHeading">Decaf</h4>
@@ -129,7 +164,14 @@
             </p>
           </div>
         </label>
-        <input type="radio" name="coffeeType" id="blended" />
+        <input
+          type="radio"
+          [formControl]="coffeeType"
+          (change)="onChangeActive($event)"
+          value="Blended"
+          name="coffeeType"
+          id="blended"
+        />
         <label for="blended">
           <div class="panel">
             <h4 class="mainHeading">Blended</h4>
@@ -143,7 +185,14 @@
         How much would you like?
       </button>
       <div class="panelWrapper" style="display: none">
-        <input type="radio" name="howMuchCoffee" id="quarter" />
+        <input
+          type="radio"
+          [formControl]="howMuchCoffee"
+          (change)="onChangeActive($event)"
+          value="250g"
+          name="howMuchCoffee"
+          id="quarter"
+        />
         <label for="quarter">
           <div class="panel">
             <h4 class="mainHeading">250g</h4>
@@ -152,7 +201,14 @@
             </p>
           </div>
         </label>
-        <input type="radio" name="howMuchCoffee" id="half" />
+        <input
+          type="radio"
+          [formControl]="howMuchCoffee"
+          (change)="onChangeActive($event)"
+          value="500g"
+          name="howMuchCoffee"
+          id="half"
+        />
         <label for="half"
           ><div class="panel">
             <h4 class="mainHeading">500g</h4>
@@ -161,7 +217,14 @@
             </p>
           </div>
         </label>
-        <input type="radio" name="howMuchCoffee" id="full" />
+        <input
+          type="radio"
+          [formControl]="howMuchCoffee"
+          (change)="onChangeActive($event)"
+          value="1000g"
+          name="howMuchCoffee"
+          id="full"
+        />
         <label for="full">
           <div class="panel">
             <h4 class="mainHeading">1000g</h4>
@@ -175,7 +238,14 @@
         Want us to grind them?
       </button>
       <div class="panelWrapper" style="display: none">
-        <input type="radio" name="grind" id="wholeBean" />
+        <input
+          type="radio"
+          [formControl]="grind"
+          (change)="onChangeActive($event)"
+          value="Wholebean"
+          name="grind"
+          id="wholeBean"
+        />
         <label for="wholeBean">
           <div class="panel">
             <h4 class="mainHeading">Wholebean</h4>
@@ -184,8 +254,15 @@
             </p>
           </div>
         </label>
-        <input type="radio" name="grind" id="filter" />
-        <label for="filter">
+        <input
+          type="radio"
+          [formControl]="grind"
+          (select)="onChangeActive($event)"
+          value="Filter"
+          name="grind"
+          id="filterGrind"
+        />
+        <label for="filterGrind">
           <div class="panel">
             <h4 class="mainHeading">Filter</h4>
             <p class="cardParagraph">
@@ -193,7 +270,14 @@
             </p>
           </div>
         </label>
-        <input type="radio" name="grind" id="cafetiere" />
+        <input
+          type="radio"
+          [formControl]="grind"
+          (change)="onChangeActive($event)"
+          value="Cafetiére"
+          name="grind"
+          id="cafetiere"
+        />
         <label for="cafetiere">
           <div class="panel">
             <h4 class="mainHeading">Cafetiére</h4>
@@ -207,7 +291,14 @@
         How often should we deliver?
       </button>
       <div class="panelWrapper" style="display: none">
-        <input type="radio" name="delivery" id="everyWeek" />
+        <input
+          type="radio"
+          [formControl]="delivery"
+          (change)="onChangeActive($event)"
+          value="Every week"
+          name="delivery"
+          id="everyWeek"
+        />
         <label for="everyWeek">
           <div class="panel">
             <h4 class="mainHeading">Every week</h4>
@@ -216,7 +307,14 @@
             </p>
           </div>
         </label>
-        <input type="radio" name="delivery" id="twoWeeks" />
+        <input
+          type="radio"
+          [formControl]="delivery"
+          (change)="onChangeActive($event)"
+          value="Every 2 weeks"
+          name="delivery"
+          id="twoWeeks"
+        />
         <label for="twoWeeks">
           <div class="panel">
             <h4 class="mainHeading">Every 2 weeks</h4>
@@ -225,7 +323,14 @@
             </p>
           </div>
         </label>
-        <input type="radio" name="delivery" id="everyMonth" />
+        <input
+          type="radio"
+          [formControl]="delivery"
+          (change)="onChangeActive($event)"
+          value="Every month"
+          name="delivery"
+          id="everyMonth"
+        />
         <label for="everyMonth">
           <div class="panel">
             <h4 class="mainHeading">Every month</h4>
@@ -246,7 +351,7 @@
         </div>
       </div>
       <div class="submitButton">
-        <button class="submit">Create my plan!</button>
+        <button (click)="onClick()" class="submit">Create my plan!</button>
       </div>
     </div>
   </section>

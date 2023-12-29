@@ -8,6 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./subscribe.component.scss'],
 })
 export class SubscribeComponent implements OnInit {
+  beverage = new FormControl();
+  coffeeType = new FormControl();
+  howMuchCoffee = new FormControl();
+  grind = new FormControl();
+  delivery = new FormControl();
+
   constructor(private router: Router) {}
 
   ngOnInit(): void {
@@ -32,5 +38,12 @@ export class SubscribeComponent implements OnInit {
     } else {
       panel.style.maxHeight = panel.scrollHeight + 'px';
     }
+  }
+  onClick() {
+    console.log(this.beverage.value);
+  }
+
+  onChangeActive(event: any) {
+    console.log(event);
   }
 }

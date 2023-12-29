@@ -9,6 +9,8 @@ import { SubscribeComponent } from './core/subscribe/subscribe.component';
 import { NavbarComponent } from './core/navbar/navbar.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CheckoutPopupComponent } from './core/checkout-popup/checkout-popup.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +20,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     SubscribeComponent,
     NavbarComponent,
     FooterComponent,
+    CheckoutPopupComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent],
 })

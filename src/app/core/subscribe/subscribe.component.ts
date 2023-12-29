@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { CheckoutPopupComponent } from '../checkout-popup/checkout-popup.component';
 
 @Component({
   selector: 'app-subscribe',
@@ -8,14 +10,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./subscribe.component.scss'],
 })
 export class SubscribeComponent implements OnInit {
-  beverage = new FormControl('_____');
+  beverage = new FormControl('');
   coffeeType = new FormControl('_____');
   howMuchCoffee = new FormControl('_____');
   grind = new FormControl('_____');
   delivery = new FormControl('_____');
   grindDisabled: boolean = false;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private modalService: NgbModal) {}
 
   ngOnInit(): void {
     if (this.router.url == '/subscribe') {
@@ -75,5 +77,14 @@ export class SubscribeComponent implements OnInit {
       (document.querySelector('.delivery') as HTMLSpanElement).innerText = this
         .delivery.value as string;
     }
+  }
+
+  open() {
+    const modalRef = this.modalService.open(CheckoutPopupComponent);
+    modalRef.componentInstance.beverage = this.beverage.value;
+    modalRef.componentInstance.coffeeType = this.coffeeType.value;
+    modalRef.componentInstance.howMuchCoffee = this.howMuchCoffee.value;
+    modalRef.componentInstance.grind = this.grind.value;
+    modalRef.componentInstance.delivery = this.delivery.value;
   }
 }

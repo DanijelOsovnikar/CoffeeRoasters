@@ -351,8 +351,8 @@
         <div class="order">
           <h2>Order Summary</h2>
           <p *ngIf="grindDisabled">
-            “I drink my coffee using <span class="beverage">_____</span>, with a
-            <span class="coffeeType">_____</span> type of bean.
+            “I drink my coffee using <span class="beverage">Capsules</span>,
+            with a <span class="coffeeType">_____</span> type of bean.
             <span class="howMuchCoffee">_____</span> , sent to me
             <span class="delivery">_____</span>.”
           </p>
@@ -366,7 +366,9 @@
         </div>
       </div>
       <div class="submitButton">
-        <button (click)="onClick()" class="submit">Create my plan!</button>
+        <button (click)="onClick()" (click)="open()" class="submit">
+          Create my plan!
+        </button>
       </div>
     </div>
   </section>

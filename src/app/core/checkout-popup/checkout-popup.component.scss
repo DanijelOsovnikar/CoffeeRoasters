@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   border-radius: 1rem;
+  --bs-gutter-x: 0;
 
   .header {
     background-color: #333d4b;
@@ -21,6 +22,64 @@
     }
   }
   .main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .order {
+      margin-top: 3rem;
+      width: 80%;
+      color: #83888f;
+      font-family: $fraunces;
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 2.5rem;
+      span {
+        color: #0e8784;
+      }
+    }
+    .disclaimer {
+      width: 80%;
+      color: #333d4b;
+      font-family: $barlow;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.625rem;
+      opacity: 0.8;
+    }
+    .price {
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      p {
+        color: #333d4b;
+        font-family: $fraunces;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 2.25rem;
+      }
+      button {
+        padding: 1rem 3.5rem;
+        border-radius: 0.375rem;
+        background: #0e8784;
+        border: none;
+        color: $lightCreamyBg;
+        font-family: $fraunces;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 1.5625rem;
+
+        &:hover {
+          background-color: #66d2cf;
+          cursor: pointer;
+        }
+      }
+    }
   }
 }
 

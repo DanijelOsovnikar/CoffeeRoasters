@@ -82,7 +82,8 @@
         <input
           type="radio"
           [formControl]="beverage"
-          (change)="onChangeActive($event)"
+          (change)="onChangeSummary()"
+          (change)="isCapsule($event)"
           value="Capsule"
           name="beverage"
           id="capsule"
@@ -98,7 +99,8 @@
         <input
           type="radio"
           [formControl]="beverage"
-          (change)="onChangeActive($event)"
+          (change)="onChangeSummary()"
+          (change)="noCapsule($event)"
           value="Filter"
           name="beverage"
           id="filter"
@@ -114,7 +116,8 @@
         <input
           type="radio"
           [formControl]="beverage"
-          (change)="onChangeActive($event)"
+          (change)="onChangeSummary()"
+          (change)="noCapsule($event)"
           value="Espresso"
           name="beverage"
           id="espresso"
@@ -135,7 +138,7 @@
         <input
           type="radio"
           [formControl]="coffeeType"
-          (change)="onChangeActive($event)"
+          (change)="onChangeSummary()"
           value="Single Origin"
           name="coffeeType"
           id="singleOrigin"
@@ -151,7 +154,7 @@
         <input
           type="radio"
           [formControl]="coffeeType"
-          (change)="onChangeActive($event)"
+          (change)="onChangeSummary()"
           value="Decaf"
           name="coffeeType"
           id="decaf"
@@ -167,7 +170,7 @@
         <input
           type="radio"
           [formControl]="coffeeType"
-          (change)="onChangeActive($event)"
+          (change)="onChangeSummary()"
           value="Blended"
           name="coffeeType"
           id="blended"
@@ -188,7 +191,7 @@
         <input
           type="radio"
           [formControl]="howMuchCoffee"
-          (change)="onChangeActive($event)"
+          (change)="onChangeSummary()"
           value="250g"
           name="howMuchCoffee"
           id="quarter"
@@ -204,7 +207,7 @@
         <input
           type="radio"
           [formControl]="howMuchCoffee"
-          (change)="onChangeActive($event)"
+          (change)="onChangeSummary()"
           value="500g"
           name="howMuchCoffee"
           id="half"
@@ -220,7 +223,7 @@
         <input
           type="radio"
           [formControl]="howMuchCoffee"
-          (change)="onChangeActive($event)"
+          (change)="onChangeSummary()"
           value="1000g"
           name="howMuchCoffee"
           id="full"
@@ -234,14 +237,18 @@
           </div>
         </label>
       </div>
-      <button (click)="toggleFunc($event)" class="accordion smallHeading">
+      <button
+        [disabled]="grindDisabled"
+        (click)="toggleFunc($event)"
+        class="accordion smallHeading"
+      >
         Want us to grind them?
       </button>
       <div class="panelWrapper" style="display: none">
         <input
           type="radio"
           [formControl]="grind"
-          (change)="onChangeActive($event)"
+          (change)="onChangeSummary()"
           value="Wholebean"
           name="grind"
           id="wholeBean"
@@ -257,7 +264,7 @@
         <input
           type="radio"
           [formControl]="grind"
-          (select)="onChangeActive($event)"
+          (change)="onChangeSummary()"
           value="Filter"
           name="grind"
           id="filterGrind"
@@ -273,7 +280,7 @@
         <input
           type="radio"
           [formControl]="grind"
-          (change)="onChangeActive($event)"
+          (change)="onChangeSummary()"
           value="Cafetiére"
           name="grind"
           id="cafetiere"
@@ -294,7 +301,7 @@
         <input
           type="radio"
           [formControl]="delivery"
-          (change)="onChangeActive($event)"
+          (change)="onChangeSummary()"
           value="Every week"
           name="delivery"
           id="everyWeek"
@@ -310,7 +317,7 @@
         <input
           type="radio"
           [formControl]="delivery"
-          (change)="onChangeActive($event)"
+          (change)="onChangeSummary()"
           value="Every 2 weeks"
           name="delivery"
           id="twoWeeks"
@@ -326,7 +333,7 @@
         <input
           type="radio"
           [formControl]="delivery"
-          (change)="onChangeActive($event)"
+          (change)="onChangeSummary()"
           value="Every month"
           name="delivery"
           id="everyMonth"
@@ -343,10 +350,18 @@
       <div class="summary">
         <div class="order">
           <h2>Order Summary</h2>
-          <p>
-            “I drink my coffee using <span>Capsules</span>, with a
-            <span>_____</span> type of bean. <span>_____</span> , sent to me
-            <span>_____</span>.”
+          <p *ngIf="grindDisabled">
+            “I drink my coffee using <span class="beverage">_____</span>, with a
+            <span class="coffeeType">_____</span> type of bean.
+            <span class="howMuchCoffee">_____</span> , sent to me
+            <span class="delivery">_____</span>.”
+          </p>
+          <p *ngIf="!grindDisabled">
+            “I drink my coffee as <span class="beverage">_____</span>, with a
+            <span class="coffeeType">_____</span> type of bean.
+            <span class="howMuchCoffee">_____</span>
+            ground ala <span class="grinded">_____</span>, sent to me
+            <span class="delivery">_____</span>.”
           </p>
         </div>
       </div>

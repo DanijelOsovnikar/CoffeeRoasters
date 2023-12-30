@@ -205,11 +205,8 @@
     border: none;
     outline: none;
     transition: 0.4s;
-
-    // .active,
-    // &:hover {
-    //   // background-color: #ccc;
-    // }
+    display: flex;
+    justify-content: space-between;
   }
   .panelWrapper {
     display: flex;

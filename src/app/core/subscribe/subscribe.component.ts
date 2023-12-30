@@ -34,11 +34,16 @@ export class SubscribeComponent implements OnInit {
     event.target.classList.toggle('active');
 
     let panel = event.srcElement.nextElementSibling;
+    let path = event.target.lastChild;
 
     if (panel.style.display === 'flex') {
       panel.style.display = 'none';
+      path.innerHTML =
+        "<path d='M15.9486 0.585815L18.777 3.41424L9.68136 12.5099L0.585693 3.41424L3.41412 0.585815L9.68091 6.85303L15.9486 0.585815Z' fill='#0E8784'/>";
     } else {
       panel.style.display = 'flex';
+      path.innerHTML =
+        "<path d='M15.9486 12.5099L18.777 9.68146L9.68136 0.585796L0.585693 9.68146L3.41412 12.5099L9.68091 6.24267L15.9486 12.5099Z' fill='#0E8784'/>";
     }
 
     if (panel.style.maxHeight) {

@@ -2,7 +2,7 @@
   <div class="header">
     <h2 class="mainHeading">Order Summary</h2>
   </div>
-  <div class="main">
+  <div class="main" *ngIf="!orderSuccess">
     <p *ngIf="!capsuleOff" class="order">
       “I drink my coffee as <span>{{ beverage }}</span
       >, with a <span>{{ coffeeType }}</span> type of bean.
@@ -24,7 +24,11 @@
     </p>
     <div class="price">
       <p>${{ price }}/ mo</p>
-      <button>Checkout</button>
+      <button (click)="ordered()">Checkout</button>
     </div>
+  </div>
+  <div class="orderSuccess" *ngIf="orderSuccess">
+    <img src="assets/Check-Background-PNG.png" alt="orderSuccess" />
+    <h3 class="mainHeading">Your order was confirmed</h3>
   </div>
 </div>

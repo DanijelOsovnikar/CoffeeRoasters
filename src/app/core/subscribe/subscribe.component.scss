@@ -36,7 +36,7 @@
 }
 
 .container {
-  margin-top: 3em;
+  margin-top: 2.75em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -171,6 +171,14 @@
       padding: 1rem 0;
       border-bottom: 1px solid #83888f;
       width: 100%;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      .buttonDisabled {
+        color: #bebebf;
+      }
       p {
         color: $darkGrayBlue;
         font-size: 1.5rem;
@@ -301,7 +309,7 @@ label {
     font-size: 1.125rem;
     &:hover {
       cursor: pointer;
-      background-color: #0a605f;
+      background-color: #66d2cf;
     }
   }
 }
@@ -310,6 +318,9 @@ label {
   @include panel;
 }
 
+.buttonDisabled {
+  color: #bebebf;
+}
 input {
   display: none;
 }

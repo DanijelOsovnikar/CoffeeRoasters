@@ -13,7 +13,8 @@ export class CheckoutPopupComponent implements OnInit {
   @Input() grind: string = '';
   @Input() delivery: string = '';
   @Input() price: number = 0;
-  capsuleOff = true;
+  capsuleOff: boolean = true;
+  orderSuccess: boolean = false;
 
   constructor() {}
 
@@ -27,5 +28,9 @@ export class CheckoutPopupComponent implements OnInit {
     } else if (this.beverage == 'Filter' || this.beverage == 'Espresso') {
       this.capsuleOff = true;
     }
+  }
+
+  ordered(): void {
+    this.orderSuccess = true;
   }
 }

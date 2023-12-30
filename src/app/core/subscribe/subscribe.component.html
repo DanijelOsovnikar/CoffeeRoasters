@@ -67,7 +67,9 @@
           <p class="mainHeading"><span>03</span> Quantity</p>
         </li>
         <li>
-          <p class="mainHeading"><span>04</span> Grind Option</p>
+          <p id="grindOption" class="mainHeading">
+            <span id="grindOptionSpan">04</span> Grind Option
+          </p>
         </li>
         <li>
           <p class="mainHeading"><span>05</span> Deliveries</p>
@@ -244,6 +246,7 @@
         [disabled]="grindDisabled"
         (click)="toggleFunc($event)"
         class="accordion smallHeading"
+        id="disabledButton"
       >
         Want us to grind them?
       </button>
@@ -363,7 +366,7 @@
             <span class="delivery">_____</span>.”
           </p>
           <p *ngIf="!grindDisabled">
-            “I drink my coffee as <span class="beverage">_____</span>, with a
+            “I drink my coffee as <span class="beverage"></span>, with a
             <span class="coffeeType">_____</span> type of bean.
             <span class="howMuchCoffee">_____</span>
             ground ala <span class="grinded">_____</span>, sent to me

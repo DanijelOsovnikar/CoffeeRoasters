@@ -53,12 +53,24 @@ export class SubscribeComponent implements OnInit {
     if (event.target.checked == true) {
       this.grindDisabled = true;
     }
+    (
+      document.getElementById('disabledButton') as HTMLButtonElement
+    ).classList.add('buttonDisabled');
+    (
+      document.getElementById('grindOption') as HTMLParagraphElement
+    ).classList.add('buttonDisabled');
   }
 
   noCapsule(event: any) {
     if (event.target.checked == true) {
       this.grindDisabled = false;
     }
+    (
+      document.getElementById('disabledButton') as HTMLButtonElement
+    ).classList.remove('buttonDisabled');
+    (
+      document.getElementById('grindOption') as HTMLParagraphElement
+    ).classList.remove('buttonDisabled');
   }
 
   onChangeSummary() {

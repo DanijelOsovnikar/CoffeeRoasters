@@ -5,19 +5,109 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 2.75rem;
+  --bs-gutter-x: 0;
   .nav {
-    a {
-      text-decoration: none;
-      font-family: $barlow;
-      font-weight: 700;
-      color: $gray;
-      font-size: 1em;
-      line-height: 15px;
-      margin: 0 1em;
+    align-items: center;
+    ul {
+      list-style: none;
+      display: flex;
+      margin-bottom: unset;
+      padding-left: unset;
 
-      &:hover {
-        color: $darkGrayBlue;
+      a {
+        text-decoration: none;
+        font-family: $barlow;
+        font-weight: 700;
+        color: $gray;
+        font-size: 1em;
+        line-height: 15px;
+        margin: 0 1em;
+
+        &:hover {
+          color: $darkGrayBlue;
+        }
       }
+    }
+  }
+  .hamburger {
+    display: none;
+    cursor: pointer;
+
+    .bar {
+      display: block;
+      width: 25px;
+      height: 5px;
+      margin: 5px auto;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      background-color: $darkGrayBlue;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 576px) {
+  .container {
+    .nav {
+      ul {
+        li {
+          a {
+            margin: 0 0.5em;
+            font-size: 0.84em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .container {
+    flex-wrap: wrap;
+    &.active {
+      transition: all 0.3s ease-in-out;
+    }
+    .hamburger {
+      display: block;
+
+      &.active .bar:nth-child(2) {
+        opacity: 0;
+      }
+
+      &.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+
+      &.active .bar:nth-child(3) {
+        transform: translateY(-12px) rotate(-45deg);
+      }
+    }
+  }
+  .nav {
+    position: sticky;
+    top: -100%;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    display: none;
+
+    &.active {
+      display: block;
+      left: 0;
+      top: 80px;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+
+      .nav-menu {
+        flex-direction: column;
+        li {
+          margin: 0.5rem;
+        }
+      }
+    }
+
+    a {
+      margin: 16px 0;
     }
   }
 }

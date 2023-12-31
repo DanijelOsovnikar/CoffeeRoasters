@@ -13,7 +13,7 @@
     align-items: center;
     justify-content: space-between;
     .logo {
-      margin: 0 5.5em;
+      margin: 0 5em;
     }
     .nav {
       a {
@@ -41,6 +41,114 @@
         position: relative;
         top: -2px;
         left: -3px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1399px) and (min-width: 1200px) {
+  .container {
+    .wrapper {
+      .logo {
+        margin: 0 0 0 2em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+  .container {
+    .wrapper {
+      width: 80%;
+      .logo {
+        margin: 0 3em;
+      }
+    }
+    .social {
+      margin-right: 1.5em;
+      width: 15%;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: 15rem;
+    .wrapper {
+      width: 100%;
+      height: 40%;
+      flex-direction: column;
+      margin-top: 2rem;
+
+      .logo {
+        margin: 0 3em;
+      }
+    }
+    .social {
+      margin-right: 1.5em;
+      width: 15%;
+      margin: 2rem;
+      a {
+        margin: 0 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 576px) {
+  .container {
+    flex-direction: column;
+    height: 15rem;
+    .wrapper {
+      width: 100%;
+      height: 40%;
+      flex-direction: column;
+      margin-top: 2rem;
+
+      .logo {
+        margin: 0 3em;
+      }
+    }
+    .social {
+      margin-right: 1.5em;
+      width: 15%;
+      margin: 2rem;
+      a {
+        margin: 0 1rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 575px) {
+  .container {
+    flex-direction: column;
+    height: 20rem;
+    .wrapper {
+      width: 100%;
+      height: 40%;
+      flex-direction: column;
+      margin-top: 2rem;
+
+      .nav {
+        text-align: center;
+        margin-top: 1.5rem;
+        a {
+          width: 100%;
+          margin: 1rem;
+        }
+      }
+
+      .logo {
+        margin: 0 3em;
+      }
+    }
+    .social {
+      margin-right: 1.5em;
+      width: 15%;
+      margin: 2rem;
+      a {
+        margin: 0 1rem;
       }
     }
   }

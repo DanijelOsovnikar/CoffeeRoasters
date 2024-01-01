@@ -7,6 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  tabletImage: boolean = false;
+  mobileImage: boolean = false;
+
   constructor(private router: Router) {}
   ngOnInit(): void {
     if (this.router.url == '/home') {

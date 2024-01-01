@@ -26,16 +26,20 @@
   margin-top: 2.75rem;
   width: 100%;
   .text-hero {
-    position: absolute;
-    top: 250px;
-    left: 175px;
+    float: inline-start;
+    margin: 4rem 3rem;
     p {
       width: 26.5rem;
       margin-top: 1.5rem;
     }
   }
-  img {
+  .divImageHero {
     border-radius: 1rem;
+    width: 100%;
+    height: 20rem;
+    background-image: image-set("assets/about/desktop/image-hero-whitecup.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 .first {
@@ -44,8 +48,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  img {
+
+  .divImageSectionFirst {
     border-radius: 1rem;
+    width: 40%;
+    height: 33rem;
+    background-image: image-set("assets/about/desktop/image-commitment.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .text-commitment {
     h2 {
@@ -68,35 +78,41 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+
+    .divImageSectionTwo {
+      border-radius: 1rem;
+      width: 40%;
+      height: 33rem;
+      background-image: image-set("assets/about/desktop/image-quality.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      top: -100px;
+      border-radius: 1rem;
+    }
     .second-text {
       p {
         width: 33.75rem;
         margin-top: 2rem;
       }
     }
-    img {
-      position: relative;
-      top: -100px;
-      border-radius: 1rem;
-    }
   }
 }
 .headquarters {
   width: 85%;
-  margin: 10rem 0;
+  margin: 6rem 0;
 
   h2 {
     color: #83888f;
     line-height: 2rem;
     font-size: 1.5rem;
+    margin-bottom: 4rem;
   }
   .group-wrapper {
     display: flex;
     justify-content: space-between;
     .group {
-      margin: 4.5rem 6.5rem 0 0;
-      img {
-      }
+      width: 30%;
       h3 {
         color: $darkGrayBlue;
         font-size: 2rem;
@@ -105,6 +121,232 @@
       }
       p {
         color: $darkGrayBlue;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1200px) {
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+  .first {
+    width: 55rem;
+
+    .text-commitment {
+      p {
+        width: 27.75rem;
+      }
+    }
+  }
+  .second {
+    .wrapper {
+      .second-text {
+        width: 40%;
+        p {
+          width: 23.75rem;
+          margin-top: 2rem;
+        }
+        h2 {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  .first {
+    width: 40rem;
+    .divImageSectionFirst {
+      background-position-x: center;
+      width: 42%;
+    }
+    .text-commitment {
+      p {
+        width: 20.75rem;
+      }
+    }
+  }
+  .second {
+    .wrapper {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      .second-text {
+        width: 100%;
+        text-align: center;
+        p {
+          width: 100%;
+          padding: 0 4rem;
+          margin: 2rem 0 4rem 0;
+        }
+        h2 {
+          width: 100%;
+        }
+      }
+      .divImageSectionTwo {
+        width: 80%;
+        height: 20rem;
+        background-image: image-set("assets/about/tablet/image-quality.jpg");
+        position: relative;
+        top: -100px;
+        border-radius: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 576px) {
+  .hero {
+    .divImageHero {
+      border-radius: 1rem;
+      width: 100%;
+      height: 20rem;
+      background-image: image-set(
+        "assets/about/tablet/image-hero-whitecup.jpg"
+      );
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+  .first {
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 8rem;
+
+    .divImageSectionFirst {
+      background-image: image-set("assets/about/mobile/image-commitment.jpg");
+      width: 100%;
+      height: 40rem;
+      margin-bottom: 5rem;
+    }
+    .text-commitment {
+      text-align: center;
+      p {
+        width: 100%;
+      }
+    }
+  }
+  .second {
+    .wrapper {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      .second-text {
+        width: 100%;
+        text-align: center;
+        p {
+          width: 100%;
+          padding: 0 4rem;
+          margin: 2rem 0 4rem 0;
+        }
+        h2 {
+          width: 100%;
+        }
+      }
+      .divImageSectionTwo {
+        width: 80%;
+        height: 20rem;
+        background-image: image-set("assets/about/tablet/image-quality.jpg");
+
+        position: relative;
+        top: -100px;
+        border-radius: 1rem;
+      }
+    }
+  }
+  .headquarters {
+    h2 {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .hero {
+    .text-hero {
+      text-align: center;
+
+      h2 {
+        margin-top: 5rem;
+      }
+
+      p {
+        width: 100%;
+      }
+    }
+
+    .divImageHero {
+      border-radius: 1rem;
+      width: 100%;
+      height: 34rem;
+      background-image: image-set(
+        "assets/about/mobile/image-hero-whitecup.jpg"
+      );
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+  .first {
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 8rem;
+
+    .divImageSectionFirst {
+      background-image: image-set("assets/about/mobile/image-commitment.jpg");
+      width: 100%;
+      height: 40rem;
+      margin-bottom: 5rem;
+    }
+
+    .text-commitment {
+      text-align: center;
+      h2 {
+        margin-top: 3rem;
+      }
+      p {
+        width: 100%;
+      }
+    }
+  }
+  .second {
+    .wrapper {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      .second-text {
+        width: 100%;
+        text-align: center;
+        p {
+          width: 100%;
+          padding: 0 2rem;
+          margin: 2rem 0 4rem 0;
+        }
+        h2 {
+          width: 100%;
+          font-size: 2rem;
+        }
+      }
+      .divImageSectionTwo {
+        width: 80%;
+        height: 12rem;
+        background-image: image-set("assets/about/mobile/image-quality.jpg");
+
+        position: relative;
+        top: -100px;
+        border-radius: 1rem;
+      }
+    }
+  }
+  .headquarters {
+    text-align: center;
+    h2 {
+      font-size: 2.5rem;
+    }
+    .group-wrapper {
+      flex-wrap: wrap;
+      justify-content: center;
+      .group {
+        width: 70%;
+        text-align: center;
       }
     }
   }

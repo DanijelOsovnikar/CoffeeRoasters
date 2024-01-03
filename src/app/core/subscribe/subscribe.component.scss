@@ -44,21 +44,26 @@
   .hero {
     width: 100%;
     .hero-text {
-      position: absolute;
-      top: 250px;
-      left: 150px;
+      float: inline-start;
+      margin: 6rem 3rem;
       p {
         width: 28rem;
       }
     }
-    img {
+    .imageDivHero {
       border-radius: 1rem;
+      background-image: image-set(
+        "assets/plan/desktop/image-hero-blackcup.jpg"
+      );
+      width: 100%;
+      height: 25rem;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
   }
   .first {
     width: 100%;
     margin-top: 8rem;
-    height: 38rem;
   }
   .subscribe {
     width: 90%;
@@ -73,41 +78,45 @@
   border-radius: 1rem;
   width: 100%;
   height: 100%;
-  padding-top: 2.5rem;
-  padding-left: 5rem;
 
-  .line {
-    background-color: $paleOrange;
-    margin-top: 5rem;
-    height: 2px;
-    width: 50rem;
+  .stepWrapper {
+    // width: 100%;
+    margin-left: 5rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 2.5rem 0;
 
-    .circle {
-      width: 30px;
-      height: 30px;
-      border: 2px solid #0e8784;
-      border-radius: 50%;
-
-      &:first-of-type {
-        position: relative;
-        left: -15px;
+    .group {
+      .line {
+        background-color: $paleOrange;
+        height: 2px;
+        width: 126%;
+        margin-left: 1.8rem;
       }
-
-      &:last-of-type {
+      .circle {
         position: relative;
-        left: 15px;
+        top: -16px;
+        width: 30px;
+        height: 30px;
+        border: 2px solid #0e8784;
+        background-color: $darkGrayBlue;
+        border-radius: 50%;
+
+        &:first-of-type {
+          position: relative;
+          left: -15px;
+        }
+
+        &:last-of-type {
+          position: relative;
+          left: 15px;
+        }
       }
     }
-  }
-  .stepWrapper {
-    width: 60rem;
-    display: flex;
-    justify-content: space-between;
+
     .group:first-of-type {
-      width: 20rem;
+      width: 24%;
       margin-top: 3rem;
       h2 {
         color: $paleOrange;
@@ -116,20 +125,21 @@
         font-size: 2rem;
         line-height: 2.25rem;
         color: $lightCreamyBg;
-        width: 10rem;
+        width: 100%;
         margin: 2.28rem 0;
       }
       p {
-        width: 19rem;
+        width: 100%;
       }
     }
     .group:nth-of-type(2) {
-      width: 20rem;
+      width: 24%;
       position: relative;
       left: 5rem;
       margin-top: 3rem;
       h2 {
         color: $paleOrange;
+        width: 100%;
       }
       h3 {
         font-size: 2rem;
@@ -138,11 +148,11 @@
         margin: 2.28rem 0;
       }
       p {
-        width: 18rem;
+        width: 100%;
       }
     }
     .group:last-of-type {
-      width: 20rem;
+      width: 30%;
       position: relative;
       left: 10rem;
       margin-top: 3rem;
@@ -154,10 +164,10 @@
         font-size: 2rem;
         line-height: 2.25rem;
         color: $lightCreamyBg;
-        width: 14rem;
+        width: 80%;
       }
       p {
-        width: 17rem;
+        width: 80%;
       }
     }
   }
@@ -213,6 +223,10 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+
+    &:first-of-type {
+      max-height: 320px;
+    }
   }
 }
 label {
@@ -337,4 +351,238 @@ input[id="everyWeek"]:checked + label[for="everyWeek"] .panel,
 input[id="twoWeeks"]:checked + label[for="twoWeeks"] .panel,
 input[id="everyMonth"]:checked + label[for="everyMonth"] .panel {
   @include panel;
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1200px) {
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+  .firstWrapper {
+    .stepWrapper {
+      .group {
+        .line {
+          width: 140%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  .navColumn {
+    display: none;
+  }
+  .optionsColumn {
+    width: 100%;
+  }
+  .submitButton {
+    justify-content: center;
+  }
+  .container {
+    .subscribe {
+      width: 100%;
+      margin-top: 4rem;
+    }
+  }
+  .firstWrapper {
+    .stepWrapper {
+      margin-left: 2rem;
+      .group {
+        .line {
+          margin-left: 0.8rem;
+          width: 150%;
+        }
+        .circle {
+          left: 0px;
+          &:first-of-type {
+            left: 0px;
+          }
+
+          &:last-of-type {
+            position: relative;
+            left: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 576px) {
+  .navColumn {
+    display: none;
+  }
+  .optionsColumn {
+    width: 100%;
+  }
+  .submitButton {
+    justify-content: center;
+  }
+  .container {
+    .subscribe {
+      width: 100%;
+      margin-top: 4rem;
+    }
+    .hero {
+      .hero-text {
+        h2 {
+          font-size: 3rem;
+        }
+        p {
+          width: 20rem;
+        }
+      }
+      .imageDivHero {
+        background-image: image-set(
+          "assets/plan/tablet/image-hero-blackcup.jpg"
+        );
+      }
+    }
+    .firstWrapper {
+      .stepWrapper {
+        margin: unset;
+        .group {
+          text-align: center;
+          width: 100%;
+          margin-top: unset;
+          p {
+            padding: 0 4rem;
+          }
+          &:nth-of-type(2) {
+            left: 0px;
+            margin: 1.5rem 0;
+          }
+
+          &:last-of-type {
+            left: 0px;
+            margin: 1.5rem 0;
+            h3 {
+              width: 100%;
+            }
+            p {
+              width: 100%;
+            }
+          }
+          .line {
+            display: none;
+          }
+          .circle {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .navColumn {
+    display: none;
+  }
+  .submitButton {
+    justify-content: center;
+  }
+  .container {
+    .subscribe {
+      width: 100%;
+      margin-top: 4rem;
+    }
+    .hero {
+      .hero-text {
+        width: 100%;
+        margin: 12rem 0;
+        text-align: center;
+        h2 {
+          width: 100%;
+          font-size: 3.55rem;
+        }
+        p {
+          padding: 0 3rem;
+          width: 100%;
+        }
+      }
+      .imageDivHero {
+        background-image: image-set(
+          "assets/plan/mobile/image-hero-blackcup.jpg"
+        );
+        height: 40rem;
+      }
+    }
+  }
+  .firstWrapper {
+    .stepWrapper {
+      margin: unset;
+      .group {
+        text-align: center;
+        width: 100%;
+        margin-top: unset;
+        p {
+          padding: 0 4rem;
+        }
+        &:first-of-type {
+          width: 100%;
+        }
+        &:nth-of-type(2) {
+          left: 0px;
+          margin: 1.5rem 0;
+          width: 100%;
+        }
+
+        &:last-of-type {
+          left: 0px;
+          margin: 1.5rem 0;
+          width: 100%;
+          h3 {
+            width: 100%;
+          }
+          p {
+            width: 100%;
+          }
+        }
+        .line {
+          display: none;
+        }
+        .circle {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .optionsColumn {
+    width: 100%;
+    .panelWrapper {
+      flex-wrap: wrap;
+
+      &:first-of-type {
+        max-height: 564px;
+      }
+    }
+  }
+  label {
+    width: 100%;
+  }
+  .panel {
+    height: unset;
+  }
+  input[id="capsule"]:checked + label[for="capsule"] .panel,
+  input[id="filter"]:checked + label[for="filter"] .panel,
+  input[id="espresso"]:checked + label[for="espresso"] .panel,
+  input[id="singleOrigin"]:checked + label[for="singleOrigin"] .panel,
+  input[id="decaf"]:checked + label[for="decaf"] .panel,
+  input[id="blended"]:checked + label[for="blended"] .panel,
+  input[id="quarter"]:checked + label[for="quarter"] .panel,
+  input[id="half"]:checked + label[for="half"] .panel,
+  input[id="full"]:checked + label[for="full"] .panel,
+  input[id="wholeBean"]:checked + label[for="wholeBean"] .panel,
+  input[id="filterGrind"]:checked + label[for="filterGrind"] .panel,
+  input[id="cafetiere"]:checked + label[for="cafetiere"] .panel,
+  input[id="everyWeek"]:checked + label[for="everyWeek"] .panel,
+  input[id="twoWeeks"]:checked + label[for="twoWeeks"] .panel,
+  input[id="everyMonth"]:checked + label[for="everyMonth"] .panel {
+    @include panelMobile;
+  }
+  .summary {
+    height: 20rem;
+  }
 }

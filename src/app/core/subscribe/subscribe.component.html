@@ -8,23 +8,14 @@
         convenience, for quality.
       </p>
     </div>
-    <img
-      src="assets/plan/desktop/image-hero-blackcup.jpg"
-      alt="heroImg"
-      width="100%"
-    />
+    <div class="imageDivHero"></div>
   </div>
   <section class="first">
     <div class="firstWrapper">
-      <div class="line">
-        <div class="circle"></div>
-
-        <div class="circle"></div>
-
-        <div class="circle"></div>
-      </div>
       <div class="stepWrapper">
         <div class="group">
+          <div class="line"></div>
+          <div class="circle"></div>
           <h2 class="mainHeading">01</h2>
           <h3 class="smallHeading">Pick your coffee</h3>
           <p class="mainParagraph">
@@ -34,6 +25,8 @@
           </p>
         </div>
         <div class="group">
+          <div class="line"></div>
+          <div class="circle"></div>
           <h2 class="mainHeading">02</h2>
           <h3 class="smallHeading">Choose the frequency</h3>
           <p class="mainParagraph">
@@ -43,6 +36,8 @@
           </p>
         </div>
         <div class="group">
+          <div class="line" style="visibility: hidden"></div>
+          <div class="circle"></div>
           <h2 class="mainHeading">03</h2>
           <h3 class="smallHeading">Receive and enjoy!</h3>
           <p class="mainParagraph">
@@ -94,7 +89,7 @@
           "
         </svg>
       </button>
-      <div class="panelWrapper" style="display: flex; max-height: 320px">
+      <div class="panelWrapper" style="display: flex">
         <input
           type="radio"
           [formControl]="beverage"

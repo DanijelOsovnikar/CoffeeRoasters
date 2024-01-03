@@ -6,8 +6,10 @@
   align-items: center;
   padding-top: 2.75rem;
   --bs-gutter-x: 0;
+
   .nav {
     align-items: center;
+
     ul {
       list-style: none;
       display: flex;
@@ -38,8 +40,8 @@
       width: 25px;
       height: 5px;
       margin: 5px auto;
-      -webkit-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
       background-color: $darkGrayBlue;
     }
   }
@@ -83,18 +85,15 @@
     }
   }
   .nav {
-    position: sticky;
-    top: -100%;
     flex-direction: column;
     width: 100%;
     text-align: center;
-    transition: 0.3s;
     display: none;
 
     &.active {
       display: block;
       left: 0;
-      top: 80px;
+      top: 20px;
       margin-top: 2rem;
       flex-wrap: wrap;
 

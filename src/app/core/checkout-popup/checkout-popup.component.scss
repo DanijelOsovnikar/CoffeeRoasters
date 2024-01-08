@@ -105,3 +105,24 @@
   font-weight: 900;
   line-height: 3rem; /* 120% */
 }
+
+@media screen and (max-width: 575px) {
+  .container {
+    .main {
+      .order {
+        margin-top: 1.5rem;
+        font-size: 1.3rem;
+        line-height: 2rem;
+      }
+      .price {
+        p {
+          margin-top: 1rem;
+          font-size: 1.3rem;
+        }
+        button {
+          padding: 0 2.5rem;
+        }
+      }
+    }
+  }
+}
